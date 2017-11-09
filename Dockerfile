@@ -13,7 +13,7 @@ WORKDIR /opt/prerender
 VOLUME /var/log/prerender /var/log/redis /var/lib/redis
 
 EXPOSE 3000
-ENV REDIS_URL=redis://localhost:6379/0
+
 # 4 hours
 ENV PAGE_TTL=14400
 ENV PRERENDER_NUM_WORKERS=4
