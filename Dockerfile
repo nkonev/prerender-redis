@@ -23,4 +23,4 @@ ENV PRERENDER_NUM_ITERATIONS=20
 ADD ./server.js /opt/prerender/server.js
 ADD ./supervisord.conf /etc/supervisord.conf
 RUN cat /etc/supervisord.conf
-CMD ["supervisord", "-c", "/etc/supervisord.conf", "--nodaemon"]
+CMD ["supervisord", "-c", "/etc/supervisord.conf", "--nodaemon", "--loglevel", "debug"]
