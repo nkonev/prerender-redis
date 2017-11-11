@@ -20,7 +20,7 @@ ENV PRERENDER_NUM_WORKERS=4
 ENV NUM_SOFT_ITERATIONS=10
 ENV PRERENDER_NUM_ITERATIONS=20
 
+ENTRYPOINT ["supervisord", "-c", "/etc/supervisord.conf"]
+
 ADD ./server.js /opt/prerender/server.js
 ADD ./supervisord.conf /etc/supervisord.conf
-RUN cat /etc/supervisord.conf
-ENTRYPOINT ["supervisord", "-c", "/etc/supervisord.conf"]

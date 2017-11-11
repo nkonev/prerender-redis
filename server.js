@@ -7,10 +7,8 @@ var server = prerender({
     accessLog: {
           // Check out the file-stream-rotator docs for parameters
           fileStreamRotator: {
-              filename: '/var/log/prerender/access-%DATE%.log',
-              frequency: 'daily',
-              date_format: 'YYYY-MM-DD',
-              verbose: false
+              frequency: 'custom',
+              verbose: true
           },
 
           // Check out the morgan docs for the available formats
