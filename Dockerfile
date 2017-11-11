@@ -10,7 +10,7 @@ RUN yum install -y epel-release && \
 	echo 'Prerender successfully installed'
 WORKDIR /opt/prerender
 
-VOLUME /var/log/prerender /var/log/redis /var/lib/redis /etc/redis.conf
+VOLUME /var/log/prerender /var/log/redis /var/lib/redis
 
 EXPOSE 3000
 
